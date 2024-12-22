@@ -84,6 +84,28 @@ void printNode()
   }
 }
 
+void searchNode(int data)
+{
+  cur = root;
+  while (cur != NULL)
+  {
+    if (cur->nilai == data)
+    {
+      cout << "Data ditemukan\n";
+      return;
+    }
+    if (data > cur->nilai) // Jika data lebih besar
+    {
+      cur = cur->kanan; // Cari ke kanan
+    }
+    else // Jika data lebih kecil
+    {
+      cur = cur->kiri; // Cari ke kiri
+    }
+  }
+  cout << "Data tidak ditemukan\n";
+}
+
 int main()
 {
   createFirstNode(10); // Membuat root
@@ -91,6 +113,7 @@ int main()
   insertNode(5);
   insertNode(12);
   insertNode(3);
-  printNode(); // Mencetak isi tree
+  printNode();    // Mencetak isi tree
+  searchNode(12); // Mencari node
   return 0;
 }
