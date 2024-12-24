@@ -113,7 +113,7 @@ int main()
   insertNode(5);
   insertNode(12);
   insertNode(3);
-  printNode();    // Mencetak isi tree
+  printNode();
   searchNode(12); // Mencari node
   return 0;
 }
